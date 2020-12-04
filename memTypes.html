@@ -1,0 +1,124 @@
+<html>  
+    <head>  
+        <title>
+            Memory Types
+        </title>
+        <link rel="stylesheet" type="text/css" href="Style.css"> </link>
+    </head>
+    <body>
+        <!--menu buttons-->
+        <a href="main.html" class="Menubutton">Home</a>
+        <a href="help.html" class="Menubutton">how is it calculated</a>
+
+        <!--First types of memory on site-->
+        <h2>Read Only Memory (ROM)</h2>
+        <ul>
+            <li>this kind of memory does not lose data when electricity feed is cut off</li>
+            <li>it has many types such as:</li>
+            <li>PROM , EPROM, EEPROM , FLASH EPROM, MASK EPROM</li>
+        </ul>
+
+        <ol type="A">
+            <li><h3>PROGRAMMABLE ROM (PROM)</h3>
+                &nbsp;&nbsp;this memory can be programmed a single time only
+            </li>   
+
+            <li><h3>Erasable PROM (EPROM)</h3>
+                <ul>
+                    <li> its a ROM memory except that it can be reprogrammed multiple times </li>
+                    <li> to program this type of memory follow these steps
+                        <ul>
+                            <li>
+                                remove the chipset from the board and insert it onto an erasing devices <br/>
+                                erase the previous program by exposing the chipset to xray for 15-20 minutes
+                            </li>
+                            <li>
+                                insert the chipset into the programing device and write your program   
+                            </li>
+                            <li>
+                                return the chipset into its locaiton on the system
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+            <h3>Electrically Programable/Erasable Memory (EE Prom)</h3>
+               <ul>
+                   <li> same as the EPROM except it can be erased electronically and short time <br/>
+                        the erasing occourse BIT-LEVEL unlike the EPROM which get erased completly
+                    </li>
+                    <li>
+                        can be erased/programmed on the system board without being removed
+                    </li>
+               </ul>
+            </li>
+
+            <li>
+            <h3>Flash Memory</h3>
+                <ul>
+                    <li>
+                        can be erased completly relatively fast (less than a second) <br/>
+                        the erasing does not occour on bit-level like the EEPROM
+                    </li>
+                    <li>
+                        can be erased/programmed on the system board without being removed
+                    </li>
+                    <li>
+                        used to update  BIOSROM Memories
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+            <h3>MASK ROM</h3>
+                <ul>
+                <li> this type of memory is programmed by the factory and cannot be reprogrammed <br/>
+                    by the end user. its the cheapest ROM Memory
+                </li>
+                </ul>
+            </li>
+        </ol>
+        <!--second types of memory on site-->
+        <h2>Random Access Memory (RAM)</h2>
+        <ul>
+            <li>this kind of memory loses its data when electricity feed is cut off</li>
+            <li>it has many types such as:</li>
+            <li>DRAM, SRAM</li>
+        </ul>
+        <ol type="A">
+            <li>
+            <h3>Static RAM (SRAM)</h3>
+                <ul>
+                    <li>
+                        this memory depends on flip-flops (FF) to store datas
+                    </li>
+                    <li>
+                        memory size is big because it needs 6 transistors to store 1 bit
+                    </li>
+                    <li>
+                        used in CADE memories
+                    </li>
+                </ul>
+            </li>   
+            <li>
+            <h3>Dynamic RAM (DRAM)</h3>
+                <ul>
+                    <li>
+                        manifacturing process depends on capacitors so it needs constant resuscitations
+                    </li>
+                    <li>
+                        memory size is small because we need only 1 capacitor to store 1 bit
+                    </li>
+                    <li>
+                        PROS: High capacity - low manifacturing cost - lower voltage then SRAM
+                    </li>
+                    <li>
+                        CONS: needs constant resuscitations - cannot pass data while resuscitating
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </body>
+</html>
