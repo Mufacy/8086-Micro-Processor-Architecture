@@ -4,6 +4,37 @@
             8086-cpu interface calculator
         </title>
         <link rel="stylesheet" type="text/css" href="Style.css"> </link>
+
+        <script>
+            //needs simplification
+            function CalculateMemory ()
+            {
+                var AddBUS  = document.getElementById("EDTAddress").value;
+                var DataBUS = document.getElementById("EDTData").value;
+                var acount = AddBUS % 10;
+                var asize = AddBUS - acount;
+                document.write('Address Bus count = '+AddBUS+'<br/>');
+                document.write('Data Bus count = '+AddBUS);
+                document.write('<br/>Memory Structure is '+2+'<sup>'+asize+'</sup>');
+                document.write(2+'<sup>'+acount+'</sup>');
+                document.write(' X '+DataBUS+' and it equals ');
+                var datasize = 'empty string';
+                switch(asize)
+                {
+                    case 10:  datasize = 'K'; 
+                                break;
+                    case 20:  datasize = 'M';
+                                break;
+                    case 30:  datasize = 'G';
+                                break;
+                    default: datasize = '';
+                }
+                var calculatedpower = Math.pow(2,acount);
+                document.write(calculatedpower+datasize+' X '+DataBUS);
+                calculatedpower = calculatedpower*DataBUS;
+                document.write('<br/> Memory Capacity is '+calculatedpower+' '+datasize);
+            }
+        </script>
     </head>
     <body>
         <!--menu buttons-->
@@ -13,7 +44,10 @@
 
         <br/>
         <br/>
-        Address Legs <input type="text"/>
-        Data Legs    <input type="text"/>
+        <form>
+            Address Legs <input type="text" id="EDTAddress"/>
+            Data Legs    <input type="text" id="EDTData"/>
+            <input type="button" value="calculate" onclick = "CalculateMemory();"/>
+        </form>
     </body>
 </html>
