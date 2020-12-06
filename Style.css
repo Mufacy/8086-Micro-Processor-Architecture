@@ -8,3 +8,14 @@ a.Menubutton {
   display: inline-block;
   font-size: 16px;
 }
+
+a.Helpbutton {
+  background-color: #a8325c; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
