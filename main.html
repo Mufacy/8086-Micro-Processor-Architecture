@@ -9,15 +9,51 @@
             //needs simplification
             function CalculateMemory ()
             {
+                //address bus count and data bus count and memory capacity here
                 var AddBUS  = document.getElementById("EDTAddress").value;
                 var DataBUS = document.getElementById("EDTData").value;
+                var MemoryCapacity = document.getElementById("").valu
+
                 var acount = AddBUS % 10;
+
+                //this will be converted to Kilo or Mega or giga..
                 var asize = AddBUS - acount;
-                document.write('Address Bus count = '+AddBUS+'<br/>');
-                document.write('Data Bus count = '+AddBUS);
-                document.write('<br/>Memory Structure is '+2+'<sup>'+asize+'</sup>');
-                document.write(2+'<sup>'+acount+'</sup>');
-                document.write(' X '+DataBUS+' and it equals ');
+
+                //force user to fill at least two fields
+                if (AddBUS === "")
+                {
+                    if ((DataBUS === "") && (MemoryCapacity === ""))
+                    {
+                        alert("you need at least two details");
+                        return false;
+                    }
+                }
+                else
+                if (DataBUS === "")
+                {
+                    if ((AddBUS === "") && (MemoryCapacity === ""))
+                    {
+                        alert("you need at least two details");
+                        return false;
+                    }
+                }
+                elseif (MemoryCapacity === "")
+                {
+                    if ((DataBUS === "") && (AddBUS === ""))
+                    {
+                        alert("you need at least two details");
+                        return false;
+                    }
+                }
+
+                //get the textarea element and fill it with the method
+                HowToText = document.getElementById("EDTHowTo");
+
+                HowToText.value =  'Address Bus count = '+AddBUS+'\n';
+                HowToText.value += 'Data Bus count = '+AddBUS;
+                HowToText.value += '\nMemory Structure is '+2+'^'+asize;
+                HowToText.value += ' 2^'+acount;
+                HowToText.value += ' X '+DataBUS+' and it equals ';
                 var datasize = 'empty string';
                 switch(asize)
                 {
@@ -30,9 +66,9 @@
                     default: datasize = '';
                 }
                 var calculatedpower = Math.pow(2,acount);
-                document.write(calculatedpower+datasize+' X '+DataBUS);
+                HowToText.value += calculatedpower+datasize+' X '+DataBUS;
                 calculatedpower = calculatedpower*DataBUS;
-                document.write('<br/> Memory Capacity is '+calculatedpower+' '+datasize);
+                HowToText.value += '\nMemory Capacity is '+calculatedpower+' '+datasize;
             }
         </script>
     </head>
@@ -45,9 +81,18 @@
         <br/>
         <br/>
         <form>
-            Address Legs <input type="text" id="EDTAddress"/>
-            Data Legs    <input type="text" id="EDTData"/>
+            Please Enter Two of the following:
+            <p>
+                Address Legs    <input type="text" id="EDTAddress"/>
+                Data Legs       <input type="text" id="EDTData"/>
+                Memory Capacity <input type="text" id="EDTData"/>
+            </p>
             <input type="button" value="calculate" onclick = "CalculateMemory();"/>
+            <p>
+                Result:
+                <br/>
+                <textarea cols="81" rows="15" id="EDTHowTo" onfocus="this.blur();"></textarea>
+            </p>
         </form>
     </body>
 </html>
