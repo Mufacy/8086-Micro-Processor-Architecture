@@ -1,0 +1,36 @@
+<html>  
+    <head>  
+        <title>
+            8086-cpu interface calculator - Memory Properties Calculation
+        </title>
+        <link rel="stylesheet" type="text/css" href="css/Style.css"> </link>
+        <script type="text/javascript" src="js/MemCalculator.js"></script>
+        <script text="text/javascript" src="../js/lang.js"> </script>
+    </head>
+    <body>
+        <!--menu buttons-->
+        <nav>
+            <a href="../index.html" class="Menubutton">Home</a>
+            <a href="memTypes.html" class="Menubutton">Memory types</a>
+            <a href="MemCalculate.html" class="Menubutton">Memory Properties Calculator</a>
+            <input type="button" value="EN" onclick="LoadEnglish();">
+            <input type="button" value="AR" onclick="LoadArabic();">
+        </nav>
+
+        <p> <a href="help.html" class="Helpbutton">how is it calculated</a> </p>
+        <form>
+            Please Enter Two of the following:
+            <p>
+                Address Legs    <input type="text" id="EDTAddress"/>
+                Data Legs       <input type="text" id="EDTData"/>
+                Memory Capacity <input type="text" id="EDTCapacity"/>
+            </p>
+            <input type="button" value="calculate" onclick = "CalculateMemory();"/>
+            <p>
+                Result:
+                <br/>
+                <textarea cols="81" rows="15" id="EDTHowTo" onfocus="this.blur();"></textarea>
+            </p>
+        </form>
+    </body>
+</html>

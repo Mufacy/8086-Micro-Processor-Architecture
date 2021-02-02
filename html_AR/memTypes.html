@@ -1,0 +1,128 @@
+<html dir="rtl">  
+    <head>  
+        <title>
+            انماط الذواكر
+        </title>
+        <link rel="stylesheet" type="text/css" href="../css/Style.css"> </link>
+        <script text="text/javascript" src="../js/lang.js"> </script>
+    </head>
+    <body>
+        <!--menu buttons-->
+        <nav>
+            <a href="../index.html" class="Menubutton">الرئيسية</a>
+            <a href="memTypes.html" class="Menubutton">انماط الذواكر</a>
+            <a href="MemCalculate.html" class="Menubutton">حاسبة خصائص الذواكر</a>
+            <input type="button" value="EN" onclick="LoadEnglish();">
+            <input type="button" value="AR" onclick="LoadArabic();">
+        </nav>
+
+        <!--First types of memory on site-->
+        <h2>ذاكرة قابلة للقراءة فقط Read Only Memory (ROM)</h2>
+        <ul>
+            <li>هذا النوع من الذواكر لا يخسر بيناته عند انقطاع تغذية الكهرباء</li>
+            <li>له عدة انواع منها:</li>
+            <li>PROM , EPROM, EEPROM , FLASH EPROM, MASK EPROM</li>
+        </ul>
+
+        <ol type="A">
+            <li><h3>ذاكرة PROGRAMMABLE ROM (PROM) القابلة للبرمجة مرة واحد</h3>
+            </li>   
+
+            <li><h3>ذاكرة Erasable PROM (EPROM) القابلة للبرمجة عدة مرات</h3>
+                <ul>
+                    <li> وهي ذاكرة ROM الا انها قابلة للبرمجة عدة مرات </li>
+                    <li> لبرمجة هذا النوع من الذواكر يجب اتباع الخطات التالية:
+                        <ul>
+                            <li>
+                                ازالة الشريحة من اللوحة و دخالها الى جهاز المحي<br/>
+                               محي البرنامج القديم عبر تعريض الشرحية الى الاشعة فوق البنفسجية لمدة 15-20 دقيقة
+                            </li>
+                            <li>
+                               ادخال الشريحة الى جهاز البرمجة و كتابة البرنامج
+                            </li>
+                            <li>
+                               اعادة الشريحة الى موقعها في اللوحة
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+            <h3>ذاكرة Electrically Programable/Erasable Memory (EE Prom)</h3>
+               <ul>
+                   <li> مثل ذاكرة ال PROM ولكن يتم برمجتها كهربائيا و بوقت اقصر <br/>
+                      يتم المحي على مستوى البتات على عكس الذواكر السابقة التي يتم محيها بشكل كامل
+                    </li>
+                    <li>
+                        يمكن محيها و اعادة برمجتها وهي متوضعة على لوحة النظام دون الازالة
+                    </li>
+               </ul>
+            </li>
+
+            <li>
+            <h3>ذاكرة Flash Memory</h3>
+                <ul>
+                    <li>
+                       امكانية محي البيانات بشكل كامل خلال زمن اقل من الثانية <br/>
+                    </li>
+                    <li>
+                        يمكن محيها و اعادة برمجتها وهي متوضعة على لوحة النظام دون الازالة
+                    </li>
+                    <li>
+                        تستخدم لتحديث ذواكر BIOSROM
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+            <h3>MASK ROM</h3>
+                <ul>
+                <li> هذا النوع من الذواكر يتم برمجته من قبل الشركة و لا يمكن اعادة برمجته  <br/>
+                    من قبل المستخدم وهي ارخص انواع الذواكر
+                </li>
+                </ul>
+            </li>
+        </ol>
+        <!--second types of memory on site-->
+        <h2>ذاكرة الولوج العشوائي Random Access Memory (RAM)</h2>
+        <ul>
+            <li>تخسر هذه الذاكرة البيانات عند انقطاع تغذية الكهرباء</li>
+            <li>لها عدة انواع اهمها: </li>
+            <li>DRAM, SRAM</li>
+        </ul>
+        <ol type="A">
+            <li>
+            <h3>Static RAM (SRAM)</h3>
+                <ul>
+                    <li>
+                       تعتمد هذه الذاكرة على القلابات لتخزين البيانات
+                    </li>
+                    <li>
+                       حجم الذاكرة كبير نسبيا لانها تحتاج الى ستة ترانزستورز لتخذين بت واحد
+                    </li>
+                    <li>
+                        تستخدم في ذواكر ال CADE
+                    </li>
+                </ul>
+            </li>   
+            <li>
+            <h3>Dynamic RAM (DRAM)</h3>
+                <ul>
+                    <li>
+                        عملية التصنيع تعتمد على المكثفات لذلك تحتاج الى انعاش بشكل دوري
+                    </li>
+                    <li>
+                        حجم الذاكرة صغير لانها تحتاج الى مكثف واحد لتخزين بت واحد
+                    </li>
+                    <li>
+                        الفوائد: سعة عالية - تكلفة صنع ضئيلة - جهد اقل من ال SRAM
+                    </li>
+                    <li>
+                        المساوئ: تحتاج الى انعاش دوري - لا يمكن نقل البيانات اثناء عملية الانعاش
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </body>
+</html>

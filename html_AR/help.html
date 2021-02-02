@@ -1,0 +1,57 @@
+<html dir="rtl">  
+    <head>  
+        <title>
+            حاسبة معالج و متحكم 8086
+        </title>
+        <link rel="stylesheet" type="text/css" href="../css/Style.css"> </link>
+        <script text="text/javascript" src="../js/lang.js"> </script>
+    </head>
+    <body>
+        <!--menu buttons-->
+        <nav>
+            <a href="../index.html" class="Menubutton">الرئيسية</a>
+            <a href="memTypes.html" class="Menubutton">انماط الذواكر</a>
+            <a href="MemCalculate.html" class="Menubutton">حاسبة خصائص الذواكر</a>
+            <input type="button" value="EN" onclick="LoadEnglish();">
+            <input type="button" value="AR" onclick="LoadArabic();">
+        </nav>
+
+        <dl>
+            <dt>
+                سعة الذاكرة:
+            </dt>
+            <dd>
+                هي عدد البت  (bits) التي تستطيع الذاكرة تخذينها <br/> 
+                &nbsp;&nbsp;و واحداتها هي الكيلو بت KiloBits و الميغا بت MegaBits و الجيجا بت GigaBits
+            </dd>
+
+            <br/>
+            <dt>
+                الهيكل التنظيمي للذاكرة:
+            </dt>
+            <dd>
+                هيكل الذاكرة يعتمد على عدد المواقع الموجودة ضمن الذاكرة <br/>
+                قد يحوي الموقع على اربع بتات او ثمان بتات و هذا يعتمد على المصنع و التصميم الداخلي
+                (يمكن حساب عدد البتات التي يحتويها الموقع من عدد ارجل معطيات الشريحة ) 
+            </dd>
+
+            <br/>
+            <dt>
+                سرعة الذاكرة:
+            </dt>
+            <dd>
+                الذمن اللازم لوصول البيانات الى الذاكرة و وصفه هو <b>Access Time</b> in nano seconds <b>ns</b>
+            </dd>
+
+            <br/>
+            <dt>
+                قواعد مستخدمة في حساب خصائص الذاكرة:
+            </dt>
+            <dd>
+                2<sup>n</sup> حيث n ترمز الى عدد المواقع الموجودة في الذاكرة <br/>
+                y ترمز الى عدد البتات داخل اي موقع في الذاكرة و ترمز الى عدد ارجل المعطيات ايضا  <br/>
+                2<sup>n</sup>.y السعة الكلية للذاكرة
+            </dd>
+        </dl>
+    </body>
+</html>
