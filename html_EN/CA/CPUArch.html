@@ -1,0 +1,43 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <img style="position:absolute; right:0px" src="../../img/CPUnits.jpg" />
+    <h1>
+        The 8086 CPU is divided into two units, the bus interface unit and the Execution unit
+    </h1>
+    <ul>
+        <h2>BIU: BUS interface unit</h2>
+        <li>this unit is responsable of most of the work executed by the CPU Like:</li>
+        <li>fetching instrucitons</li>
+        <li>reading and writing memory variables</li>
+        <li>input/output data from and to connected devices</li>
+    </ul>
+    <ul>
+        <h2>EU: Execution unit</h2>
+        <li>this unit job is to decode and execute instructions and its made up of:</li>
+        <li>Arthmeatics and logical unit</li>
+        <a>Flag or status Registers</a>
+        <br /><a>General purpose registers</a>
+        <br /><a>Temporary Registers</a>
+        <br /><span>EU Control System</span>
+    </ul>
+
+    <span>
+        The execution unit:
+        fetches the instructions from the instruciton queue (inside BIU), Decodes it<br />
+        and then executes the instruction contents.<br />
+        if the Executions unit ever needs information stored in the memory, it will order <br />
+        the BIU unit to retreive it by sending the address of that information in the memory.<br />
+
+        The most important job for the EU is the Arthmeatics and logical operations.<br />
+        after each instruction execution the EU checks the flag registers.<br />
+    </span>
+
+    
+</body>
+
+</html>
